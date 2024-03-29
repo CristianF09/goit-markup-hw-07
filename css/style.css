@@ -406,7 +406,6 @@ ul {
 
 /* -- Customers -- */
 .customers-section .container {
-
   width: 1200px;
   height: 200px;
   top: 2568px;
@@ -470,6 +469,7 @@ ul {
 }
 /* -- Footer Style -- */
 
+
 .global-footer {
   background-color: var(--link-color_hover);
   padding-top: 112x;
@@ -525,26 +525,24 @@ ul {
   width: 12px;
   height: 12px;
   position: absolute;
-  top: 55%;
+  top: 60%;
   left: 10px;
   fill: currentColor;
 }
+
 .modal-form-label {
   display: flex;
   flex-direction: column;
   color: var(--text-color);
   gap: 4px;
   margin-top: 15px;
+  position:relative;
 }
 
-.modal-form-label input {
-  height: 30px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  padding-left: 26px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
-              0px 1px 1px rgba(0, 0, 0, 0.14),
-              0px 2px 1px rgba(0, 0, 0, 0.2);
+.modal-form-icon:hover
+.modal-form-icon:focus {
+  cursor: pointer;
+  background-color: #404bbf;
 }
 
 .form-data-title {
@@ -556,14 +554,14 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   margin-top: 15px;
 }
 
-.agree-check .icon {
+.agree-check {
   margin-right: 8px;
   fill: none;
   outline: none;
-  border: 1px solid #212121;
   border-radius: 2px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
   background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -628,6 +626,15 @@ ul {
   align-items: center;
 }
 
+.textarea {
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color);
+  gap: 4px;
+  margin-top: 15px;
+  position:relative;
+}
+
 .subscribe {
   position: relative;
   top: -150px;
@@ -680,7 +687,6 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
 }
 
 .footer-bnt {
@@ -702,3 +708,10 @@ ul {
   left: 290px;
   bottom: 5px;
 }
+
+.icon-paper-plane {
+  width: 24px;
+  height: 20px;
+  top: 2px;
+  gap: 0px;
+}|
