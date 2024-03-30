@@ -25,6 +25,11 @@ main {
   color: var(--text-color);
 }
 
+
+.container-header {   
+  display:none;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -59,7 +64,7 @@ main {
   top: 0px;
 }
 
-.logo {
+.logo-header {
   font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -714,4 +719,35 @@ ul {
   height: 20px;
   top: 2px;
   gap: 0px;
-}|
+}
+
+
+.burger-menu { 
+ color: #2E2F42;
+ position: absolute;
+ top: 40px;.
+ right: 40px; 
+}
+
+
+/* Stilizare tableta si device-uri peste 768px */
+@media screen and (min-width: 768px) {
+  .container-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  }
+ 
+  .burger-menu {
+    display: none;
+  }
+}
+
+
+
+/* Stilizare tableta si device-uri peste 1200px */
+@media screen and (min-width: 1200px) {
+  .burger-menu { 
+  display: none;
+  }
+}
