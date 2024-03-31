@@ -13,18 +13,90 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet">
+    <link rel="stylesheet" href="./css/">
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
+
+    <!-- Mobile menu  -->
+
+    <div class="js-menu-container">
+      <button class="menu-toggle js-close-menu">&times;</button>
+      <nav class="mobile-menu-navigation" id="nav">
+        <ul class="nav-links top-line">
+          <li>
+            <a href="index.html" target="_self" class="active">Studio</a>
+          </li>
+          <li>
+            <a href="portofolio.html" target="_self">Portofolio</a>
+          </li>
+          <li>
+            <a href="index.html" target="_self">Contact</a>
+          </li>
+        </ul>
+        <div class="contact-navigation">
+          <ul>
+            <li>
+              <a href="mailto:info@devstudio.com" class="mail-menu"
+                >info@devstudio.com</a>
+            </li>
+            <li>
+              <a href="tel:+11 (000) 111-11-11" class="phone-menu"
+                >+11 (000) 111-11-11</a>
+            </li>
+          </ul>
+        </div>
+        <div class="icons-list">
+          <a href="http://https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+            aria-label="instagram-link" class="icons">
+            <svg>
+              <use href="./images/icons/symbol-defs.svg#icon-instagram"></use>
+            </svg>
+          </a>
+          <a href="http://https://www.twitter.com/" target="_blank" rel="noopener noreferrer"
+            aria-label="twitter-link" class="icons">
+            <svg>
+              <use href="./images/icons/symbol-defs.svg#icon-twitter"></use>
+            </svg>
+          </a>
+          <a href="http://https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="facebook-link"
+            class="icons">
+            <svg>
+              <use href="./images/icons/symbol-defs.svg#icon-facebook"></use>
+            </svg>
+          </a>
+          <a href="http://https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="linkedin-link"
+            class="icons">
+            <svg>
+              <use href="./images/icons/symbol-defs.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Logo and Social Links -->
+
+  
     <header class="global-header">
+      <!--
       <div class="container-header">
         <a href="./index.html" class="logo webstudio logo"
           >Web<span class="logo-header">Studio</span></a
         >
-        <script src="https://unpkg.com/feather-icons"></script>
-        <nav>
+
+      -->
+      <div class="header-mobil">
+        <a href="./index.html" class="logo webstudio logo"
+        >Web<span class="logo-header">Studio</span></a>
+        <button class="js-open-menu" id="open">
+          <i data-feather="menu" class="burger-menu"></i>
+        </button>
+      </div>
+      <nav>
+      <!--
           <ul class="nav-links top-line">
             <li class="nav-links-menu">
               <a href="./index.html" class="active">Studio</a>
@@ -51,6 +123,32 @@
           </li>
         </ul>
       </div>
+      -->
+      <nav class="nav" id="nav">
+        <ul class="nav-links">
+          <li>
+            <a href="index.html" target="_self" class="active">Studio</a>
+          </li>
+          <li>
+            <a href="portofolio.html" target="_self">Portofolio</a>
+          </li>
+          <li>
+            <a href="index.html" target="_self">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="contact">
+        <ul>
+          <li>
+            <a href="mailto:info@devstudio.com" class="mail-menu"
+              >info@devstudio.com</a>
+          </li>
+          <li>
+            <a href="tel:+11 (000) 111-11-11" class="phone-menu"
+            >+11 (000) 111-11-11</a>
+          </li>
+        </ul>
+      </div>
     </header>
     <main>
 
@@ -66,6 +164,77 @@
             Order Service
           </button>
         </div>
+
+        <div class="modal is-hidden" data-modal>
+          <div class="modal-content">
+            <button type="button" class="close-btn" data-modal-close>&times;</button>
+            <form>
+              <h2>Leave your contacts and we will call you back</h2>
+              <div class="form">
+                <label for="name">Name</label>
+                <div class="input">
+                  <svg class="modal-svg">
+                    <use href="./images/icons/symbol-defs-icons-form.svg#icon-user"></use>
+                  </svg>
+                  <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    autocomplete="off" 
+                    placeholder="" 
+                    class="form-input">
+                </div>
+                <label for="tel">Phone</label>
+                <div class="input">
+                  <svg class="modal-svg">
+                    <use href="./images/icons/symbol-defs-icons-form.svg#icon-phone"></use>
+                  </svg>
+                  <input 
+                    type="tel" 
+                    id="tel" 
+                    autocomplete="off" 
+                    class="form-input">
+                </div>
+                <label for="email">Email</label>
+                <div class="input">
+                  <svg class="modal-svg">
+                    <use href="./images/icons/symbol-defs-icons-form.svg#icon-e-mail"></use>
+                  </svg>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    autocomplete="off" 
+                    class="form-input">
+                </div>
+                <label for="textarea">Comment</label>
+                <textarea 
+                  class="textarea" 
+                  name="comment" 
+                  id="textarea" 
+                  cols="30" 
+                  rows="10"
+                  placeholder="Text input">
+                </textarea>
+              </div>
+              <div class="checkbox-container">
+                <label for="checkbox"></label>
+                <input 
+                  type="checkbox" 
+                  name="privacy" 
+                  id="checkbox" 
+                  value="privacy-policy" 
+                  class="checkbox">
+                <p class="text-checkbox">I accept the terms and conditions of the <a href="#" class="form-link">Privacy
+                    Policy</a></p>
+              </div>
+              <button type="submit" class="form-submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </sections>  
+
+      <!--
         <div class="modal is-hidden" data-modal>
           <div class="modal-content">
             <button class="close-btn" data-modal-close>&times;</button>
@@ -147,7 +316,9 @@
           </div>
         </div>
       </sections>
-    
+    -->
+
+
       <!-- Section 1 -->
 
       <sections class="container-section section1">
@@ -253,244 +424,315 @@
           <h2 class="team-members-title">Our Team</h2>
           <ul class="our-team top-line">
             <li class="team-card">
-              <img
-                class="team-person-image"
-                src="images/Mark.jpg"
-                alt="Mark Guerrero - Product Designer"
-                width="264px"
-              /><br />
-              <h3 class="person-name">Mark Guerrero<br /></h3>
-              <p class="person-job" p>Product Designer</p>
-              <div class="icon-list">
-                <a
-                  href="https://instagram.com/"
-                  target="blank"
-                  class="icon"
-                  aria-label="instagram-link"
-                >
-                  <svg>
-                    <use
-                      href="./images/icons/symbol-defs.svg#icon-instagram"
-                    ></use>
-                  </svg>
-                </a>
-                <a
-                  href="https://twitter.com/"
-                  target="blank"
-                  class="icon"
-                  aria-label="twitter-link"
-                >
-                  <svg>
-                    <use
-                      href="./images/icons/symbol-defs.svg#icon-twitter"
-                    ></use>
-                  </svg>
-                </a>
-                <a
-                  href="https://facebook.com/"
-                  target="blank"
-                  class="icon"
-                  aria-label="facebook-link"
-                >
-                  <svg>
-                    <use
-                      href="./images/icons/symbol-defs.svg#icon-facebook"
-                    ></use>
-                  </svg>
-                </a>
-                <a
-                  href="https://linkedin.com/"
-                  target="blank"
-                  class="icon"
-                  aria-label="linkedin-link"
-                >
-                  <svg>
-                    <use
-                      href="./images/icons/symbol-defs.svg#icon-linkedin"
-                    ></use>
-                  </svg>
-                </a>
+              <div class="images">
+                <picture>
+                  <!-- Desktop-->
+                  <source media="(min-width:1200px )" srcset="images/Mark.jpg">
+                  <!-- Tablet-->
+                  <source media="(min-width:768px)" srcset="images/mark-tablet.jpg">
+                  <!-- Mobil-->
+                  <source srcset="images/mark-mobile2.png">
+                  <img src="images/Mark.jpg" alt="Mark Guerrero">
+                </picture>
+                <div class="card-content">
+                  <h3>Mark Guerrero</h3>
+                  <p>Product Designer</p>
+                  <!--
+                    <img
+                    class="team-person-image"
+                    src="images/Mark.jpg"
+                    alt="Mark Guerrero - Product Designer"
+                    width="264px"
+                  /><br />
+                  <h3 class="person-name">Mark Guerrero<br /></h3>
+                  <p class="person-job">Product Designer</p>
+                  -->
+                  <div class="icon-list">
+                    <a
+                      href="https://instagram.com/"
+                      target="blank"
+                      class="icon"
+                      aria-label="instagram-link"
+                    >
+                      <svg>
+                        <use
+                          href="./images/icons/symbol-defs.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://twitter.com/"
+                      target="blank"
+                      class="icon"
+                      aria-label="twitter-link"
+                    >
+                      <svg>
+                        <use
+                          href="./images/icons/symbol-defs.svg#icon-twitter"
+                        ></use>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://facebook.com/"
+                      target="blank"
+                      class="icon"
+                      aria-label="facebook-link"
+                    >
+                      <svg>
+                        <use
+                          href="./images/icons/symbol-defs.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://linkedin.com/"
+                      target="blank"
+                      class="icon"
+                      aria-label="linkedin-link"
+                    >
+                      <svg>
+                        <use
+                          href="./images/icons/symbol-defs.svg#icon-linkedin"
+                        ></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>  
               </div>
             </li>
+
             <li class="team-card">
-              <img
-                class="team-person-image"
-                src="images/Tom.jpg"
-                alt="Tom Ford - Fronted Developer"
-                width="264px"
-              /><br />
-              <h3 class="person-name">Tom Ford<br /></h3>
-              <p class="person-job">Fronted Developer</p>
-              <div class="icon-list">
-                <a
-                  href="https://instagram.com/"
-                  target="blank"
-                  class="icon"
-                  aria-label="instagram-link"
-                >
-                  <svg>
-                    <use
-                      href="./images/icons/symbol-defs.svg#icon-instagram"
-                    ></use>
-                  </svg>
-                </a>
-                <a
-                  href="https://twitter.com/"
-                  target="blank"
-                  class="icon"
-                  aria-label="twitter-link"
-                >
-                  <svg>
-                    <use
-                      href="./images/icons/symbol-defs.svg#icon-twitter"
-                    ></use>
-                  </svg>
-                </a>
-                <a
-                  href="https://facebook.com/"
-                  target="blank"
-                  class="icon"
-                  aria-label="facebook-link"
-                >
-                  <svg>
-                    <use
-                      href="./images/icons/symbol-defs.svg#icon-facebook"
-                    ></use>
-                  </svg>
-                </a>
-                <a
-                  href="https://linkedin.com/"
-                  target="blank"
-                  class="icon"
-                  aria-label="linkedin-link"
-                >
-                  <svg>
-                    <use
-                      href="./images/icons/symbol-defs.svg#icon-linkedin"
-                    ></use>
-                  </svg>
-                </a>
-              </div>
+              <div class="images">
+                <picture>
+                  <!-- Desktop-->
+                  <source media="(min-width:1200px )" srcset="images/Tom.jpg">
+                  <!-- Tablet-->
+                  <source media="(min-width:768px)" srcset="images/tom-tablete.jpg">
+                  <!-- Mobil-->
+                  <source srcset="images/tom-mobile2.png">
+                  <img src="images/Tom.jpg" alt="Tom Ford">
+                </picture>
+                <div class="card-content">
+                  <h3> Tom Ford</h3>
+                  <p>Frontend Developer</p>
+                  <!--
+                  <img
+                    class="team-person-image"
+                    src="images/Tom.jpg"
+                    alt="Tom Ford - Fronted Developer"
+                    width="264px"
+                  /><br />
+                  <h3 class="person-name">Tom Ford<br /></h3>
+                  <p class="person-job">Fronted Developer</p>
+                  -->
+                  <div class="icon-list">
+                    <a
+                      href="https://instagram.com/"
+                      target="blank"
+                      class="icon"
+                      aria-label="instagram-link"
+                    >
+                      <svg>
+                        <use
+                          href="./images/icons/symbol-defs.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://twitter.com/"
+                      target="blank"
+                      class="icon"
+                      aria-label="twitter-link"
+                    >
+                      <svg>
+                        <use
+                          href="./images/icons/symbol-defs.svg#icon-twitter"
+                        ></use>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://facebook.com/"
+                      target="blank"
+                      class="icon"
+                      aria-label="facebook-link"
+                    >
+                      <svg>
+                        <use
+                          href="./images/icons/symbol-defs.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://linkedin.com/"
+                      target="blank"
+                      class="icon"
+                      aria-label="linkedin-link"
+                    >
+                      <svg>
+                        <use
+                          href="./images/icons/symbol-defs.svg#icon-linkedin"
+                        ></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>  
+              </div>  
             </li>
+
             <li class="team-card">
-              <img
-                class="team-person-image"
-                src="images/Camila.jpg"
-                alt="Camila Garcia - Marketing"
-                width="264px"
-              /><br />
-              <h3 class="person-name">Camila Garcia<br /></h3>
-              <p class="person-job">Marketing</p>
-              <div class="icon-list">
-                <a
-                  href="https://instagram.com/"
-                  target="blank"
-                  class="icon"
-                  aria-label="instagram-link"
-                >
-                  <svg>
-                    <use
-                      href="./images/icons/symbol-defs.svg#icon-instagram"
-                    ></use>
-                  </svg>
-                </a>
-                <a
-                  href="https://twitter.com/"
-                  target="blank"
-                  class="icon"
-                  aria-label="twitter-link"
-                >
-                  <svg>
-                    <use
-                      href="./images/icons/symbol-defs.svg#icon-twitter"
-                    ></use>
-                  </svg>
-                </a>
-                <a
-                  href="https://facebook.com/"
-                  target="blank"
-                  class="icon"
-                  aria-label="facebook-link"
-                >
-                  <svg>
-                    <use
-                      href="./images/icons/symbol-defs.svg#icon-facebook"
-                    ></use>
-                  </svg>
-                </a>
-                <a
-                  href="https://linkedin.com/"
-                  target="blank"
-                  class="icon"
-                  aria-label="linkedin-link"
-                >
-                  <svg>
-                    <use
-                      href="./images/icons/symbol-defs.svg#icon-linkedin"
-                    ></use>
-                  </svg>
-                </a>
-              </div>
+              <div class="photo">
+                <picture>
+                  <!-- Desktop-->
+                  <source media="(min-width:1200px )" srcset="images/Camila.jpg">
+                  <!-- Tablet-->
+                  <source media="(min-width:768px)" srcset="images/camila-tablet.jpg">
+                  <!-- Mobil-->
+                  <source srcset="images/camila-mobile2.png">
+                  <img src="images/Camila.jpg" alt="Camila Garcia">
+                </picture>
+                <div class="card-content">
+                  <h3>Camila Garcia</h3>
+                  <p>Marketing</p>
+                  <!-- 
+                  <img
+                    class="team-person-image"
+                    src="images/Camila.jpg"
+                    alt="Camila Garcia - Marketing"
+                    width="264px"
+                  /><br />
+                  <h3 class="person-name">Camila Garcia<br /></h3>
+                  <p class="person-job">Marketing</p>
+                  -->  
+                  <div class="icon-list">
+                    <a
+                      href="https://instagram.com/"
+                      target="blank"
+                      class="icon"
+                      aria-label="instagram-link"
+                    >
+                      <svg>
+                        <use
+                          href="./images/icons/symbol-defs.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://twitter.com/"
+                      target="blank"
+                      class="icon"
+                      aria-label="twitter-link"
+                    >
+                      <svg>
+                        <use
+                          href="./images/icons/symbol-defs.svg#icon-twitter"
+                        ></use>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://facebook.com/"
+                      target="blank"
+                      class="icon"
+                      aria-label="facebook-link"
+                    >
+                      <svg>
+                        <use
+                          href="./images/icons/symbol-defs.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://linkedin.com/"
+                      target="blank"
+                      class="icon"
+                      aria-label="linkedin-link"
+                    >
+                      <svg>
+                        <use
+                          href="./images/icons/symbol-defs.svg#icon-linkedin"
+                        ></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>    
             </li>
+
             <li class="team-card">
-              <img
-                class="team-person-image"
-                src="images/Daniel.jpg"
-                alt="Daniel Wilson - UI Designer"
-                width="264px"
-              /><br />
-              <h3 class="person-name">Daniel Wilson<br /></h3>
-              <p class="person-job">UI Designer</p>
-              <div class="icon-list">
-                <a
-                  href="https://instagram.com/"
-                  target="blank"
-                  class="icon"
-                  aria-label="instagram-link"
-                >
-                  <svg>
-                    <use
-                      href="./images/icons/symbol-defs.svg#icon-instagram"
-                    ></use>
-                  </svg>
-                </a>
-                <a
-                  href="https://twitter.com/"
-                  target="blank"
-                  class="icon"
-                  aria-label="twitter-link"
-                >
-                  <svg>
-                    <use
-                      href="./images/icons/symbol-defs.svg#icon-twitter"
-                    ></use>
-                  </svg>
-                </a>
-                <a
-                  href="https://facebook.com/"
-                  target="blank"
-                  class="icon"
-                  aria-label="facebook-link"
-                >
-                  <svg>
-                    <use
-                      href="./images/icons/symbol-defs.svg#icon-facebook"
-                    ></use>
-                  </svg>
-                </a>
-                <a
-                  href="https://linkedin.com/"
-                  target="blank"
-                  class="icon"
-                  aria-label="linkedin-link"
-                >
-                  <svg>
-                    <use
-                      href="./images/icons/symbol-defs.svg#icon-linkedin"
-                    ></use>
-                  </svg>
-                </a>
-              </div>
+              <div class="photo">
+                <picture>
+                  <!-- Desktop-->
+                  <source media="(min-width:1200px )" srcset="images/Daniel.jpg">
+                  <!-- Tablet-->
+                  <source media="(min-width:768px)" srcset="images/daniel-tablet.jpg">
+                  <!-- Mobil-->
+                  <source srcset="images/daniel-mobile2.png">
+                  <img src="images/Daniel.jpg" alt="pDaniel Wilson">
+                </picture>
+                <div class="card-content">
+                  <h3>Daniel Wilson</h3>
+                  <p>UI Designer</p>
+                  <!--
+                  <img
+                    class="team-person-image"
+                    src="images/Daniel.jpg"
+                    alt="Daniel Wilson - UI Designer"
+                    width="264px"
+                  /><br />
+                  <h3 class="person-name">Daniel Wilson<br /></h3>
+                  <p class="person-job">UI Designer</p>
+                  -->
+                  <div class="icon-list">
+                    <a
+                      href="https://instagram.com/"
+                      target="blank"
+                      class="icon"
+                      aria-label="instagram-link"
+                    >
+                      <svg>
+                        <use
+                          href="./images/icons/symbol-defs.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://twitter.com/"
+                      target="blank"
+                      class="icon"
+                      aria-label="twitter-link"
+                    >
+                      <svg>
+                        <use
+                          href="./images/icons/symbol-defs.svg#icon-twitter"
+                        ></use>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://facebook.com/"
+                      target="blank"
+                      class="icon"
+                      aria-label="facebook-link"
+                    >
+                      <svg>
+                        <use
+                          href="./images/icons/symbol-defs.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://linkedin.com/"
+                      target="blank"
+                      class="icon"
+                      aria-label="linkedin-link"
+                    >
+                      <svg>
+                        <use
+                          href="./images/icons/symbol-defs.svg#icon-linkedin"
+                        ></use>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>    
             </li>
           </ul>
         </div>
@@ -503,29 +745,35 @@
           <h2 class="customers-title">Customers</h2>
           <ul class="customers-logo">
             <li class="client">
-              <img src="./images/icons/Logo1.svg" width="168px" height="88px" />
-              <rect
-                width="250"
-                height="150"
-                fill="tomato"
-                stroke="#2a2a2a"
-                stroke-width="4"
-                x="20"
-                y="20"
-                rx="40"
-              />
+              <div>
+                <img src="./images/icons/Logo0.svg" width="168px" height="88px" />
+              </div>    
             </li>
             <li class="client">
-              <img src="./images/icons/Logo2.svg" width="168px" height="88px" />
+              <div>
+                <img src="./images/icons/Logo1.svg" width="168px" height="88px" />
+              </div>
             </li>
             <li class="client">
-              <img src="./images/icons/Logo3.svg" width="168px" height="88px" />
+              <div>
+                <img src="./images/icons/Logo2.svg" width="168px" height="88px" />
+              </div>
             </li>
             <li class="client">
-              <img src="./images/icons/Logo4.svg" width="168px" height="88px" />
+              <div>
+                <img src="./images/icons/Logo3.svg" width="168px" height="88px" />
+              </div>
+            </li>
+              
+            <li class="client">
+              <div>
+                <img src="./images/icons/Logo4.svg" width="168px" height="88px" />
+              </div>
             </li>
             <li class="client">
-              <img src="./images/icons/Logo5.svg" width="168px" height="88px" />
+              <div>
+                <img src="./images/icons/Logo5.svg" width="168px" height="88px" />
+              </div>
             </li>
           </ul>
         </div>
@@ -535,77 +783,134 @@
     <!-- Footer -->
 
     <footer class="global-footer">
-      <div class="container">
-        <a href="./index.html" class="logo webstudio logo"
-          >WEB<span class="logo-footer">STUDIO</span></a
-        >
-        <br />
-        <p class="footer-title">
-          Increase the flow of customers and <br />
-          sales for your business with digital <br />
-          marketing & growth solutions.
-        </p>
-        <div>
-          <h4 class="footer-title-social-media">Social media<br /></h4>
+      <div class="logo-text-footer">
+        <div class="logo-footer">
+          <span class="blue">WEB</span>
+          <span class="cloud">STUDIO</span>
         </div>
+          <!--
+          <div class="container">
+            <a href="./index.html" class="logo webstudio logo"
+              >WEB<span class="logo-footer">STUDIO</span></a
+            >
+            <br />
+            -->
         <div>
-          <ul class="footer-social-media">
-            <li>
-              <img
-                src="./images/icons/instagram.svg"
-                width="40px;"
-                height="40px;"
-              />
-            </li>
-            <li>
-              <img
-                src="./images/icons/twitter.svg"
-                width="40px;"
-                height="40px;"
-              />
-            </li>
-            <li>
-              <img
-                src="./images/icons/facebook.svg"
-                width="40px;"
-                height="40px;"
-              />
-            </li>
-            <li>
-              <img
-                src="./images/icons/linkedin.svg"
-                width="40px;"
-                height="40px;"
-              />
-            </li>
-          </ul>
+          <p class="footer-title">
+            Increase the flow of customers and <br />
+            sales for your business with digital <br />
+            marketing & growth solutions.
+          </p>
+        </div>  
+      </div> 
+      <div>
+        <h4 class="footer-title-social-media">Social media<br /></h4>
+      </div>
+     <div>
+      <ul class="footer-social-media">
+        <div class="icons-list">
+            <a href="http://https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+              aria-label="instagram-link" class="icons">
+              <svg>
+                <use href="./images/icons/instagram.svg#icon-instagram"></use>
+              </svg>
+            </a>
+            <a href="http://https://www.svg#icon-twitter.com/" target="_blank" rel="noopener noreferrer"
+              aria-label="twitter-link" class="icons">
+              <svg>
+                <use href="./images/icons/twitter.svg#icon-twitter"></use>
+              </svg>
+            </a>
+            <a href="http://https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
+              aria-label="facebook-link" class="icons">
+              <svg>
+                <use href="./images/icons/facebook.svg#icon-facebook"></use>
+              </svg>
+            </a>
+            <a href="http://https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"
+              aria-label="linkedin-link" class="icons">
+              <svg>
+                <use href="./images/icons/linkedin.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </div>
+            <!--
+                <li>
+                  <img
+                    src="./images/icons/instagram.svg"
+                    width="40px;"
+                    height="40px;"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="./images/icons/twitter.svg"
+                    width="40px;"
+                    height="40px;"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="./images/icons/facebook.svg"
+                    width="40px;"
+                    height="40px;"
+                  />
+                </li>
+                <li>
+                  <img
+                    src="./images/icons/linkedin.svg"
+                    width="40px;"
+                    height="40px;"
+                  />
+                </li>
+              </ul>
+            -->
         </div>
         <div class="subscribe">
-          <h2 class="subscribe-title">Subscribe</h2>
-          <form>
-            <div>
-              <label>
-                <input class="E-mail"
-                  type="text"
-                  name="E-mail"
-                  placeholder="E-mail" 
-                  autocomplete="off"
-                  autofocus
-                />
-                <button class="footer-bnt">
-                  <h3 class="footer-btn-text">Subscribe</h3>
-                  <svg class="icon-paper-plane" width="24" height="20">
-                    <use href="./images/icons/symbol-defs-send.svg#icon-paper-plane"></use>
-                  </svg>
-                </button>
+          <form class="form-subscribe ">
+            <div class="label-email">
+              <label for="email" class=""></label>
+              <h3>Subscribe</h3>
+              <input type="email" name="email" id="email" placeholder="E-mail" class="footer-input">
+            </div>
+            <div class="label-submit">
+              <label class="label-subscribe">
+                <button type="submit" class="button-subscribe">Subscribe</button>
+                <svg class="svg-subscribe">
+                  <use href="./images/icons/symbol-defs-send.svg#icon-paper-plane"></use>
+                </svg>
               </label>
             </div>
           </form>
+            <!--
+            <h2 class="subscribe-title">Subscribe</h2>
+            <form>
+              <div>
+                <label>
+                  <input class="E-mail"
+                    type="text"
+                    name="E-mail"
+                    placeholder="E-mail" 
+                    autocomplete="off"
+                    autofocus
+                  />
+                  <button class="footer-bnt">
+                    <h3 class="footer-btn-text">Subscribe</h3>
+                    <svg class="icon-paper-plane" width="24" height="20">
+                      <use href="./images/icons/symbol-defs-send.svg#icon-paper-plane"></use>
+                    </svg>
+                  </button>
+                </label>
+              </div>
+            </form>
+            -->  
         </div>
     </footer>
+    <!-- Script -->
     <script>
       feather.replace();
     </script>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
