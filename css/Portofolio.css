@@ -1,3 +1,5 @@
+/*
+
 :root {
   --link-color: #ffffff;
   --social-link-color: #434455;
@@ -42,7 +44,7 @@ main {
   padding-right: 161px;
 }
 
-/* -- Header Style -- */
+/* -- Header Style -- 
 
 .global-header {
   border-bottom: 1px solid #e7e9fc;
@@ -134,8 +136,11 @@ main {
 .top-line {
   list-style-type: none;
 }
+*/
 
-/* -- Main Button --*/
+
+
+/* -- Main Button --
 .main-links {
   display: flex;
   cursor: pointer;
@@ -235,8 +240,10 @@ a:visited {
   cursor: pointer;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14);
 }
+*/
 
-/*-- Motto --*/
+
+/*-- Motto --
 
 .img-overlay {
   position: relative;
@@ -273,8 +280,12 @@ a:visited {
 .img-overlay:hover .overlay {
   transform: translateY(0px);
 }
+*/
 
-/* -- Project1 --*/
+
+
+
+/* -- Project1 --
 
 .project1 {
   width: 1128px;
@@ -295,6 +306,7 @@ a:visited {
   width: 360px;
   height: 300px;
 }
+*/
 
 /*
 .project1-cards1 {
@@ -331,6 +343,8 @@ a:visited {
 }
 */
 
+
+/*
 .poject1-titles1-1 {
   width: 290px;
   height: 24px;
@@ -384,8 +398,11 @@ a:visited {
   line-height: 24px;
   letter-spacing: 0.02em;
 }
+*/
 
-/* -- Project2 -- */
+
+
+/* -- Project2 -- 
 
 .project2 {
   width: 1200px;
@@ -406,6 +423,12 @@ a:visited {
   width: 360px;
   height: 300px;
 }
+*/
+
+
+
+
+
 
 /*
 .project2-cards1 {
@@ -441,6 +464,10 @@ a:visited {
 }
 */
 
+
+
+
+/*
 .poject2-title2-1 {
   width: 113px;
   height: 24px;
@@ -494,8 +521,13 @@ a:visited {
   line-height: 24px;
   letter-spacing: 0.02em;
 }
+*/
 
-/* -- Project3 -- */
+
+
+
+
+/* -- Project3 -- 
 .project3 {
   width: 1200px;
   height: 420px;
@@ -516,6 +548,8 @@ a:visited {
   width: 360px;
   height: 300px;
 }
+*/
+
 
 /*
 .project3-cards1 {
@@ -552,6 +586,10 @@ a:visited {
 }
 */
 
+
+
+
+/*
 .poject3-title3-1 {
   width: 249px;
   height: 24px;
@@ -606,7 +644,12 @@ a:visited {
   letter-spacing: 0.02em;
 }
 
-/* -- Footer Style -- */
+*/
+
+
+
+
+/* -- Footer Style -- 
 
 .global-footer {
   background-color: var(--link-color_hover);
@@ -732,3 +775,6 @@ a:visited {
   left: 290px;
   bottom: 5px;
 }
+
+
+*/
